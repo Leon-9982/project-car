@@ -9,8 +9,8 @@ class Graph {
         const segments = info.segments.map((i) => new Segment(
             points.find((p) => p.equals(i.p1)),
             points.find((p) => p.equals(i.p2))
-        ))
-        return new Graph(points, segments)
+        ));
+        return new Graph(points, segments);
     }
 
     addPoint(point) {
@@ -19,14 +19,14 @@ class Graph {
 
     containsPoint(point) {
         return this.points.find((p) => p.equals(point));
-
     }
 
     tryAddPoint(point) {
         if (!this.containsPoint(point)) {
             this.addPoint(point);
             return true;
-        } else return false;
+        }
+        return false;
     }
 
     removePoint(point) {
@@ -55,7 +55,6 @@ class Graph {
 
     removeSegment(seg) {
         this.segments.splice(this.segments.indexOf(seg), 1);
-
     }
 
     getSegmentsWithPoint(point) {
