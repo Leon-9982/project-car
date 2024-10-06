@@ -1,14 +1,12 @@
+<p align="center">
+    <img src="https://img.icons8.com/color/128/000000/html-5.png" width="128" alt="HTML Logo"/> 
+    <img src="https://img.icons8.com/color/128/000000/css3.png" width="128" alt="CSS Logo"/> 
+    <img src="https://img.icons8.com/color/128/000000/javascript.png" width="128" alt="JavaScript Logo"/>
+</p>
+
 # Self-Driving Car Project
 
 **⚠️ In Progress: This project is still under development and features are being actively added. ⚠️**
-
-## Technologies Used
-
-<p align="center">
-    <img src="https://img.icons8.com/color/64/000000/html-5.png" width="64" alt="HTML Logo"/> 
-    <img src="https://img.icons8.com/color/64/000000/css3.png" width="64" alt="CSS Logo"/> 
-    <img src="https://img.icons8.com/color/64/000000/javascript.png" width="64" alt="JavaScript Logo"/>
-</p>
 
 ## Summary
 
