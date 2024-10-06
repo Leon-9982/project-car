@@ -1,10 +1,10 @@
 class Viewport {
   constructor(canvas) {
     this.canvas = canvas;
-    this.ctx = canvas.getContext("2d")
+    this.ctx = canvas.getContext("2d");
 
     this.zoom = 1;
-    this.center = new Point(canvas.width / 2, canvas.height / 2)
+    this.center = new Point(canvas.width / 2, canvas.height / 2);
     this.offset = scale(this.center, -1);
 
     this.drag = {
@@ -15,15 +15,14 @@ class Viewport {
     };
 
     this.#addEventListeners();
-
   }
 
   reset() {
     this.ctx.restore();
-    this.ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     this.ctx.save();
-    this.ctx.translate(this.center.x, this.center.y)
-    this.ctx.scale(1 / this.zoom, 1 / this.zoom)
+    this.ctx.translate(this.center.x, this.center.y);
+    this.ctx.scale(1 / this.zoom, 1 / this.zoom);
     const offset = this.getOffset();
     this.ctx.translate(offset.x, offset.y);
   }
@@ -37,7 +36,7 @@ class Viewport {
   }
 
   getOffset() {
-    return add(this.offset, this.drag.offset)
+    return add(this.offset, this.drag.offset);
   }
 
   #addEventListeners() {
@@ -48,7 +47,7 @@ class Viewport {
   }
 
   #handleMouseDown(evt) {
-    if (evt.button == 1) { // middle mouse button
+    if (evt.button == 1) { // middle button
       this.drag.start = this.getMouse(evt);
       this.drag.active = true;
     }
@@ -69,7 +68,7 @@ class Viewport {
         end: new Point(0, 0),
         offset: new Point(0, 0),
         active: false
-      }
+      };
     }
   }
 
@@ -77,7 +76,6 @@ class Viewport {
     const dir = Math.sign(evt.deltaY);
     const step = 0.1;
     this.zoom += dir * step;
-    this.zoom = Math.max(1, Math.min(5, this.zoom)) // Min and max zoom
-
+    this.zoom = Math.max(1, Math.min(5, this.zoom));
   }
 }
