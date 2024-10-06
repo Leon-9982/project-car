@@ -2,25 +2,15 @@
 
 **⚠️ In Progress: This project is still under development and features are being actively added. ⚠️**
 
+## Technologies Used
+
+![HTML Logo](https://img.icons8.com/color/48/000000/html-5.png) 
+![CSS Logo](https://img.icons8.com/color/48/000000/css3.png) 
+![JavaScript Logo](https://img.icons8.com/color/48/000000/javascript.png)
+
 ## Summary
 
 The Self-Driving Car project aims to simulate the functionality of an autonomous vehicle using **Vanilla JavaScript**, **HTML**, and **CSS**. The simulation demonstrates key driving behaviors, showcasing how a self-driving car navigates through a basic environment while adhering to traffic rules.
-
-## Technologies Used
-
-Here are the primary technologies used in this project:
-
-- **HTML**
-  ![HTML Logo](https://img.icons8.com/color/48/000000/html-5.png)
-  [HTML Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML)
-
-- **CSS**
-  ![CSS Logo](https://img.icons8.com/color/48/000000/css3.png)
-  [CSS Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS)
-
-- **JavaScript**
-  ![JavaScript Logo](https://img.icons8.com/color/48/000000/javascript.png)
-  [JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## Features
 
@@ -29,10 +19,14 @@ Here are the primary technologies used in this project:
 - **Stops at Stop Signs**: The car acknowledges stop signs and halts appropriately.
 - **Gives Way to Pedestrians**: The car yields to pedestrians at crossings.
 
-## Getting Started
+## Screenshots
 
-To run the project locally, follow these steps:
+Include some screenshots of the simulation here.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/self-driving-car.git
+## Contributing
+
+Feel free to fork the repository and submit pull requests for any enhancements or bug fixes!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
