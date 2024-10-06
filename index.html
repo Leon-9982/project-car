@@ -46,7 +46,7 @@
         function animate() {
             viewport.reset()
             world.generate();
-            world.draw()
+            world.draw(ctx)
             graphEditor.display();
             new Envelope(graph.segments[0], 200, 20).draw(ctx)
             requestAnimationFrame(animate);
