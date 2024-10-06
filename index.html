@@ -2,29 +2,27 @@
 <html>
 
 <head>
-    <title>World Edtior</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>World Editor</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
     <h1>World Editor</h1>
     <canvas id="myCanvas"></canvas>
     <div id="controls">
-        <button onclick="dispose()">🗑️</button> <!--buttons-->
+        <button onclick="dispose()">🗑️</button>
         <button onclick="save()">💾</button>
     </div>
 
     <script src="js/world.js"></script>
-    <script src="js/math/graph.js"></script>
-    <script src="js/viewport.js"></script>
     <script src="js/graphEditor.js"></script>
+    <script src="js/viewport.js"></script>
     <script src="js/math/utils.js"></script>
+    <script src="js/math/graph.js"></script>
     <script src="js/primitives/point.js"></script>
     <script src="js/primitives/segment.js"></script>
     <script src="js/primitives/polygon.js"></script>
     <script src="js/primitives/envelope.js"></script>
-
-
     <script>
         myCanvas.width = 600;
         myCanvas.height = 600;
@@ -39,16 +37,16 @@
         const world = new World(graph);
 
         const viewport = new Viewport(myCanvas);
-        const graphEditor = new GraphEditor(viewport, graph)
+        const graphEditor = new GraphEditor(viewport, graph);
 
         animate();
 
         function animate() {
-            viewport.reset()
+            viewport.reset();
             world.generate();
-            world.draw(ctx)
+            world.draw(ctx);
+            ctx.globalAlpha = 0.3;
             graphEditor.display();
-            new Envelope(graph.segments[0], 200, 20).draw(ctx)
             requestAnimationFrame(animate);
         }
 
@@ -60,8 +58,6 @@
             localStorage.setItem("graph", JSON.stringify(graph));
         }
     </script>
-
 </body>
-
 
 </html>
