@@ -12,6 +12,9 @@
     <div id="controls">
         <button onclick="dispose()">🗑️</button>
         <button onclick="save()">💾</button>
+        &nbsp;
+        <button id="graphBtn" onclick="setMode('graph')">🌐</button>
+        <button id="stopBtn" onclick="setMode('stop')">🛑</button>
     </div>
 
     <script src="js/world.js"></script>
@@ -26,8 +29,8 @@
     <script src="js/primitives/polygon.js"></script>
     <script src="js/primitives/envelope.js"></script>
     <script>
-        myCanvas.width = 900;
-        myCanvas.height = 700;
+        myCanvas.width = 780;
+        myCanvas.height = 660;
 
         const ctx = myCanvas.getContext("2d");
 
