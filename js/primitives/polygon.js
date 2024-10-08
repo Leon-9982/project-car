@@ -9,6 +9,12 @@ class Polygon {
       }
    }
 
+   static load(info) {
+      return new Polygon(
+         info.points.map((i) => new Point(i.x, i.y))
+      );
+   }
+
    static union(polys) {
       Polygon.multiBreak(polys);
       const keptSegments = [];
@@ -93,7 +99,7 @@ class Polygon {
       let intersectionCount = 0;
       for (const seg of this.segments) {
          const int = getIntersection(outerPoint, point, seg.p1, seg.p2);
-         if (int) {
+         if(int){
             intersectionCount++;
          }
       }
