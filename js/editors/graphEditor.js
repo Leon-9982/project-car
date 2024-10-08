@@ -10,12 +10,10 @@ class GraphEditor {
     this.hovered = null;
     this.dragging = false;
     this.mouse = null;
-
-
   }
 
   enable() {
-    this.#addEventListeners()
+    this.#addEventListeners();
   }
 
   disable() {
@@ -25,10 +23,10 @@ class GraphEditor {
   }
 
   #addEventListeners() {
-    this.boundMouseDown = this.#handleMouseDown.bind(this)
-    this.boundMouseMove = this.#handleMouseMove.bind(this)
-    this.boundMouseUp = () => this.dragging = false
-    this.boundContextMenu = (evt) => evt.preventDefault()
+    this.boundMouseDown = this.#handleMouseDown.bind(this);
+    this.boundMouseMove = this.#handleMouseMove.bind(this);
+    this.boundMouseUp = () => this.dragging = false;
+    this.boundContextMenu = (evt) => evt.preventDefault();
     this.canvas.addEventListener("mousedown", this.boundMouseDown);
     this.canvas.addEventListener("mousemove", this.boundMouseMove);
     this.canvas.addEventListener("mouseup", this.boundMouseUp);
